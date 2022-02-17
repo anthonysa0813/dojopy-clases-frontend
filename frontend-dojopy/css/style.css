@@ -1,0 +1,87 @@
+* {
+  color: green;
+}
+
+/* selector de etiqueta */
+body {
+  background-color: rgb(245, 122, 122);
+  color: white;
+}
+
+/* selector de ID'S */
+#titulo {
+  color: green;
+}
+
+/* selector de clase */
+.title {
+  color: yellow;
+}
+
+/* 
+Valores de especificidad
+- etiquetas => 1
+- clases => 10
+- id's => 100
+*/
+
+h1.title#titulo {
+  color: rgb(65, 27, 0);
+}
+.title#titulo {
+  color: blue;
+}
+
+h1#titulo {
+  color: skyblue;
+}
+
+.last-phraph {
+  margin: 50px;
+  margin-top: 16px;
+  margin-left: 10px;
+  margin-right: 22px;
+  margin-bottom: 20px;
+  margin: 16px 22px 20px 10px;
+  padding: 10px;
+  border: 10px dashed rgb(107, 107, 240);
+  /* unidades lógicas */
+  border-top: 5px double red;
+}
+
+.container {
+  border: 3px solid red;
+  display: inline-block;
+  position: relative;
+}
+
+.containerImage {
+  height: 50%;
+}
+
+.containerImage img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoProduct {
+  padding: 10px;
+}
+
+.infoHidden {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border: 1px solid blue;
+  position: absolute;
+}
+/* .infoHidden p {
+  display: inline;
+} */
+
+.container:hover .infoHidden {
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
